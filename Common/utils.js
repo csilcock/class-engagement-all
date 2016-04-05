@@ -15,6 +15,22 @@ var getUsers = function getUsers(orgUnit, userId){
     return userId ? [userId] : ((orgUnit === "121868") ? consts.USER_IDS.LARGE : consts.USER_IDS.SMALL);
 };
 
+var parseDates = function(startDate, endDate){
+    var startTime = startDate === undefined ? 
+            Math.max(0, new Date().getTime() - consts.MS_PER_DAY * consts.NUM_DAYS) : 
+            parseInt(startDate),
+            
+        endTime = endDate === undefined ? 
+            new Date().getTime() : 
+            parseInt(endDate);
+            
+    return {
+        "startTime":startTime, 
+        "endTime":endTime
+    };
+};
+
+
 module.exports = {
     'getRandomLogin': getRandomLogin,
     'getRandomGrade': getRandomGrade,

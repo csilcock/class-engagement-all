@@ -1,6 +1,7 @@
 var generateCourseAccessLastDayData = require('CourseAccess/course-access-data.js').generateLast,
     generateGradesData = require('Grades/grades-data.js').generate,
-    generatePredictedGradesData = require('Grades/predicted-grades-data.js').generate;
+    generatePredictedGradesData = require('Grades/predicted-grades-data.js').generate
+    utils = require('Common/utils.js');
 
 // Last Day of Course Access of specified user for Course
 Sandbox.define('/v1/aggregates/10000/data/{orgUnitId}/{userId}','GET', function(req, res) {
@@ -40,6 +41,8 @@ Sandbox.define('/v1/aggregates/30000/data/{orgUnitId}','GET', function(req, res)
 
 // Threads started
 Sandbox.define('/v1/aggregates/40000/data/{orgUnitId}','GET', function(req, res) {
+    var dates = utils.parseDates(req.query.startTime, req.query.endTime);
+    
     //var result = generatePredictedGradesData(req.params.orgUnitId);
 
     res.type('application/json');
@@ -49,6 +52,8 @@ Sandbox.define('/v1/aggregates/40000/data/{orgUnitId}','GET', function(req, res)
 
 // Posts replied to
 Sandbox.define('/v1/aggregates/50000/data/{orgUnitId}','GET', function(req, res) {
+    var dates = utils.parseDates(req.query.startTime, req.query.endTime);
+    
     //var result = generatePredictedGradesData(req.params.orgUnitId);
 
     res.type('application/json');
