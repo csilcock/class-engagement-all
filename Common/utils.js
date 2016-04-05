@@ -34,5 +34,6 @@ var parseDates = function(startDate, endDate){
 module.exports = {
     'getRandomLogin': getRandomLogin,
     'getRandomGrade': getRandomGrade,
-    'getUsers': getUsers
+    'getUsers': getUsers,
+    'parseDates': parseDates
 };
