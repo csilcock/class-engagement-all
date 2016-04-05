@@ -44,7 +44,7 @@ Sandbox.define('/v1/aggregates/30000/data/{orgUnitId}','GET', function(req, res)
 Sandbox.define('/v1/aggregates/40000/data/{orgUnitId}','GET', function(req, res) {
     var dates = utils.parseDates(req.query.startTime, req.query.endTime);
     
-    var result = generateDiscussionsData(req.params.orgUnitId);
+    var result = generateDiscussionsData(req.params.orgUnitId, dates.startTime, dates.endTime);
 
     res.type('application/json');
     res.status(200);
@@ -55,7 +55,7 @@ Sandbox.define('/v1/aggregates/40000/data/{orgUnitId}','GET', function(req, res)
 Sandbox.define('/v1/aggregates/50000/data/{orgUnitId}','GET', function(req, res) {
     var dates = utils.parseDates(req.query.startTime, req.query.endTime);
     
-    var result = generateDiscussionsData(req.params.orgUnitId);
+    var result = generateDiscussionsData(req.params.orgUnitId, dates.startTime, dates.endTime);
 
     res.type('application/json');
     res.status(200);
