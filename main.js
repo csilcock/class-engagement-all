@@ -37,3 +37,21 @@ Sandbox.define('/v1/aggregates/30000/data/{orgUnitId}','GET', function(req, res)
     res.status(200);
     res.json(result);
 });
+
+// Threads started
+Sandbox.define('/v1/aggregates/40000/data/{orgUnitId}','GET', function(req, res) {
+    //var result = generatePredictedGradesData(req.params.orgUnitId);
+
+    res.type('application/json');
+    res.status(200);
+    res.json(result);
+});
+
+// Posts replied to
+Sandbox.define('/v1/aggregates/50000/data/{orgUnitId}','GET', function(req, res) {
+    //var result = generatePredictedGradesData(req.params.orgUnitId);
+
+    res.type('application/json');
+    res.status(200);
+    res.json(result);
+});
