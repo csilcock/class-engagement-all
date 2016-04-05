@@ -1,5 +1,6 @@
 var consts = {
     NUM_DAYS: 25,
+    MS_PER_DAY: 86400000,
     DATE_RANGE: 10,
     USER_IDS: {
         SMALL: [

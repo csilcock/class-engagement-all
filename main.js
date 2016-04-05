@@ -1,6 +1,7 @@
 var generateCourseAccessLastDayData = require('CourseAccess/course-access-data.js').generateLast,
     generateGradesData = require('Grades/grades-data.js').generate,
-    generatePredictedGradesData = require('Grades/predicted-grades-data.js').generate
+    generatePredictedGradesData = require('Grades/predicted-grades-data.js').generate,
+    generateDiscussionsData = require('Discussions/discussions-data.js').generate,
     utils = require('Common/utils.js');
 
 // Last Day of Course Access of specified user for Course
