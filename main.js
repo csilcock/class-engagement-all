@@ -24,7 +24,7 @@ Sandbox.define('/v1/aggregates/10000/data/{orgUnitId}','GET', function(req, res)
 
 // Last Day of Course Access of all users for Course - NEW ROUTE
 Sandbox.define('/v1/aggregates/10000/data/','GET', function(req, res) {
-    var result = generateCourseAccessLastDayData(req.params.orgUnitId);
+    var result = generateCourseAccessLastDayData(121868);
 
     res.type('application/json');
     res.status(200);
@@ -42,7 +42,7 @@ Sandbox.define('/v1/aggregates/20000/data/{orgUnitId}','GET', function(req, res)
 
 // Current Grade of all users for Course - NEW ROUTE
 Sandbox.define('/v1/aggregates/20000/data/','GET', function(req, res) {
-    var result = generateGradesData(req.params.orgUnitId);
+    var result = generateGradesData(121868);
 
     res.type('application/json');
     res.status(200);
@@ -60,7 +60,7 @@ Sandbox.define('/v1/aggregates/30000/data/{orgUnitId}','GET', function(req, res)
 
 // Predicted Grade of all users for Course - NEW ROUTE
 Sandbox.define('/v1/aggregates/30000/data/','GET', function(req, res) {
-    var result = generatePredictedGradesData(req.params.orgUnitId);
+    var result = generatePredictedGradesData(121868);
 
     res.type('application/json');
     res.status(200);
@@ -81,7 +81,7 @@ Sandbox.define('/v1/aggregates/40000/data/{orgUnitId}','GET', function(req, res)
 Sandbox.define('/v1/aggregates/40000/data/','GET', function(req, res) {
     var dates = utils.parseDates(req.query.startTime, req.query.endTime);
     
-    var result = generateDiscussionsData(req.params.orgUnitId, dates.startTime, dates.endTime);
+    var result = generateDiscussionsData(121868, dates.startTime, dates.endTime);
 
     res.type('application/json');
     res.status(200);
@@ -104,7 +104,7 @@ Sandbox.define('/v1/aggregates/50000/data/{orgUnitId}','GET', function(req, res)
 Sandbox.define('/v1/aggregates/50000/data/','GET', function(req, res) {
     var dates = utils.parseDates(req.query.startTime, req.query.endTime);
     
-    var result = generateDiscussionsData(req.params.orgUnitId, dates.startTime, dates.endTime);
+    var result = generateDiscussionsData(121868, dates.startTime, dates.endTime);
 
     res.type('application/json');
     res.status(200);
